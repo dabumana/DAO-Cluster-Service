@@ -106,6 +106,7 @@ The network has a potential rollback point, but every subsequent vote doubles th
 A vast majority of example are already stored in the [solana-program-library](https://github.com/solana-labs/solana-program-library/tree/master/examples), these programs can be developed in Rust or C and tested very easily, just run `make`. 
 
 ##### 4. Cluster Design
+![alt text](https://github.com/dabumana/Solana-Contributor-Resources/blob/main/images/ClusterDesign.drawio.png)
 ##### 5. Technological Stack
 ##### [Solana](https://solana.com/) - *Solana is a decentralized blockchain built to enable scalable apps.*
 ##### [Rust](https://rustup.rs/) - *Rust Programmin Language Installer*
