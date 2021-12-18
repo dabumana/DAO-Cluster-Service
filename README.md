@@ -124,6 +124,8 @@ A vast majority of example are already stored in the [solana-program-library](ht
 ##### Windows
 ##### 7. Installation
 ##### 8. PoC
+You can grab a copy of the content used directly with this [link](https://github.com/dabumana/solana-contributor-resources).
+##### *If you have all the requirements installed in your workstation just run `docker-compose up`*.
 ##### 9. Developer Best Practices
 ##### 10. Terminology
 The following terms are used throughout the guide and are officially part of the documentation provided by Solana, in case that a term is not properly listed, you can take a look [here](https://docs.solana.com/terminology).
