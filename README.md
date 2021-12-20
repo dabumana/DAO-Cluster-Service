@@ -165,6 +165,7 @@ In windows you can run a subsystem environment with `WSL2`:
 * Install [`WSL2`](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
 * Once you have the subsystem installed, follow the same steps used for `linux`
 ##### 7. Installation
+##### **In this stage you will configure the framework for development use.**
 #### **Optional Testing steps**
 * If you already installed the Optional testing requirements just clone this repository and run it:
 ```
@@ -400,7 +401,25 @@ A selection of tutorials and guides to learn about Solana development:
 
 ##### *[Solana Development Tutorial Environment Setup](https://solongwallet.medium.com/solana-development-tutorial-environment-setup-2649cb81305)* - Solana Environment Setup Reference.
 
+##### *[How to build in Solana](https://www.brianfriel.xyz/learning-how-to-build-on-solana/)* - An introductory tour to writing applications in Solana.
+
+##### *[A brief tour of programming in Anchor](https://2501babe.github.io/posts/anchor101.html)* - Anchor 101
+
+##### *[An introduction to the Solana blockchain](https://2501babe.github.io/posts/solana101.html)* - Solana 101
+
+##### *[Program Deploys](https://jstarry.notion.site/Program-deploys-29780c48794c47308d5f138074dd9838)* - How to get you SOL back from a deployed program.
+
+##### *[Understanding Program derived addresses](https://www.brianfriel.xyz/understanding-program-derived-addresses/)* - A practical overview of how Solana programs read and write data.
+
+#####  *[Transaction Fees](https://jstarry.notion.site/Transaction-Fees-f09387e6a8d84287aa16a34ecb58e239)* - How fees are calculated?.
+
+##### *[Using PDAs and SPL Token in Anchor](https://medium.com/@pirosb3/using-pdas-and-spl-token-in-anchor-and-solana-df05c57ccd04)* - Let's build a Safe Token transfer app.
+
+##### *[Anchor tutorials](https://project-serum.github.io/anchor/tutorials/)* - Anchor tutorials.
+
 ##### 13. Workshops
 ##### *[Solana Security Workshop](https://workshop.neodyme.io/index.html)* - Learn and exploit different types of flags in Solana.
 
 ##### *[Solend Auditing Workshop](https://docs.google.com/presentation/d/1jZ9kVo6hnhBsz3D2sywqpMojqLE5VTZtaXna7OHL1Uk/edit?pli=1#slide=id.ge292ecb5c9_0_60)* - Solend Auditing Workshop Slides.
+
+ 
