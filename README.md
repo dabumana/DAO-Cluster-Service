@@ -1,3 +1,4 @@
+
 ## Solana - Cluster node service
 #### Developer walk-through :feelsgood:
 ##### 1. Introduction
@@ -31,7 +32,7 @@ If your objective it's to simplify and bring agility to the development process 
 ##### General Overview
 [Solana Labs](https://github.com/solana-labs) provides a set of tools to develop applications from the client side or on-chain programs that can be consequentially interacting with the cluster,  even some examples related to the application in a real use case, but in some cases the explanation itself it's not fully clear and you need to take a look at the details, the type of details that are a defining factor between security and coding best practices.
 
-Solana promotes 8 conceptual features behind their product that are key values for understanding the actual conformation of modules and rules that handles the replication of nodes and accounts, so everything must be defined as an account model that can be an user or program.
+Solana promotes 8 conceptual features behind their product that are key values for understanding the actual conformation of modules and rules that handles the replication of nodes and accounts, so everything must be defined as an account model that can be a data account or program account.
 
 ***Core Features:***
 * Turbine: Comes to solve the scalability Trilemma through a process inspired in BitTorrent called block propagation protocol (BPP) but with a few differences including the fault tolerance, in case that a malicious propagation of a block starts to come, can be easily recreated from a verified chunk of that transaction, and the validators that are an essential component of Solana, in charge of validate the data integrity before replicating, according to their neighborhood and leader.
@@ -120,9 +121,90 @@ A vast majority of example are already stored in the [solana-program-library](ht
 ##### Toolset:
 ##### [Anchor](https://github.com/project-serum/anchor) - *Anchor is a framework for Solana's [Sealevel](https://medium.com/solana-labs/sealevel-parallel-processing-thousands-of-smart-contracts-d814b378192) runtime providing several convenient developer tools for writing smart contracts.*
 ##### 6. Requirements
+I really suggest you to deploy a local production environment through a virtualized environment, you can take a look at the options at the market, but as a standard practice you can abstract the environment with a proper cypher in a external Disk (LUKS / BitLocker), just a best practice suggestion, with a proper VPN for further access keeping separated the internal Host from the bridged connection, in case that you have your own security operation protocol, just proceed and install the libraries required for it.
 ##### Linux
+* Update your system library
+```
+$sudo apt-get update
+$sudo apt-get upgrade -y
+$sudo apt-get install curl wget git nodejs libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang make
+```
+* Install `docker` (Optional for testing)
+```
+$curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$curl -sSL https://get.docker.com/ | sudo sh
+$curl https://sh.rustup.rs -sSf | sh
+```
+* Install `kompose` (Optional for testing)
+```
+$curl -L https://github.com/kubernetes/kompose/releases/download/v1.26.0/kompose-linux-amd64 -o kompose
+$chmod +x kompose
+$sudo mv ./kompose /usr/local/bin/kompose
+$sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+* Install `docker-compose` (Optional)
+```
+$sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$sudo chmod +x /usr/local/bin/docker-compose
+```
+* Install `minikube` (Optional)
+```
+$curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+$sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+```
+* Install `cargo`, `rustup`, `rust`
+```
+$curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$source $HOME/.cargo/env
+$rustup component add rustfmt
+$rustup update
+```
 ##### Windows
+In windows you can run a subsystem environment with `WSL2`:
+* Install [`WSL2`](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
+* Once you have the subsystem installed, follow the same steps used for `linux`
 ##### 7. Installation
+#### **Optional Testing steps**
+* If you already installed the Optional testing requirements just clone this repository and run it:
+```
+$git clone https://github.com/dabumana/Solana-Contributor-Resources
+$docker-compose up
+```
+
+#### **Standard Installation**
+* Install `Solana`
+```
+$sh -c "$(curl -sSfL https://release.solana.com/v1.8.0/install)"
+```
+* Install `yarn`
+```
+$npm install -g yarn
+```
+* Install `anchor`
+```
+$npm i -g @project-serum/anchor-cli
+```
+* Any other operative system use this
+```
+$cargo install --git https://github.com/project-serum/anchor --tag v0.19.0 anchor-cli --locked
+```
+* If `cargo install` fails install the following dependencies
+```
+$sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
+```
+* Now verify the installation
+```
+$anchor --version
+```
+#### **Want to know more?**
+Take a look at the official documentation provided by `Solana-Labs`
+* 1. Clone the repositories to understand with examples how it works
+```
+$git clone https://github.com/solana-labs/solana
+$git clone https://github.com/solana-labs/solana-program-library
+$git clone https://github.com/solana-labs/rbpf
+```
 ##### 8. PoC
 You can grab a copy of the content used directly with this [link](https://github.com/dabumana/solana-contributor-resources).
 ##### *If you have all the requirements installed in your workstation just run `docker-compose up`*.
@@ -322,5 +404,3 @@ A selection of tutorials and guides to learn about Solana development:
 ##### *[Solana Security Workshop](https://workshop.neodyme.io/index.html)* - Learn and exploit different types of flags in Solana.
 
 ##### *[Solend Auditing Workshop](https://docs.google.com/presentation/d/1jZ9kVo6hnhBsz3D2sywqpMojqLE5VTZtaXna7OHL1Uk/edit?pli=1#slide=id.ge292ecb5c9_0_60)* - Solend Auditing Workshop Slides.
-
- 
