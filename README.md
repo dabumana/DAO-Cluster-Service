@@ -210,6 +210,14 @@ $git clone https://github.com/solana-labs/rbpf
 You can grab a copy of the content used directly with this [link](https://github.com/dabumana/solana-contributor-resources).
 ##### *If you have all the requirements installed in your workstation just run `docker-compose up`*.
 ##### 9. Developer Best Practices
+* Keep an isolated environment for testing, generate your `keys` for accessing remotely in case that you are using a remote server.
+* Add a whitelist to receive just the connection just from a determined IP.
+* Configure `iptables`.
+* Always check `AccountInfo::owner` to validate the current user.
+* Verify that the call from an entity has been signed properly `AccountInfo::is_signer`.
+* Use [checked math](https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-overflow) and [checked casts](https://doc.rust-lang.org/std/convert/trait.TryFrom.html) whenever possible to avoid unintentional and possibly malicious behavior.
+* Always verify the `pubkey` of any program invoked via `invoke_signed()`.
+* Ensure that the account data has the type you expect it to have.
 ##### 10. Terminology
 The following terms are used throughout the guide and are officially part of the documentation provided by Solana, in case that a term is not properly listed, you can take a look [here](https://docs.solana.com/terminology).
 
