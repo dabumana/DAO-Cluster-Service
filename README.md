@@ -125,40 +125,39 @@ I really suggest you to deploy a local production environment through a virtuali
 ##### Linux
 * Update your system library
 ```
-$sudo apt-get update
-$sudo apt-get upgrade -y
-$sudo apt-get install curl wget git nodejs libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang make
+$ sudo apt-get update
+$ sudo apt-get upgrade -y
+$ sudo apt-get install curl wget git nodejs libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang make
 ```
 * Install `docker` (Optional for testing)
 ```
-$curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$curl -sSL https://get.docker.com/ | sudo sh
-$curl https://sh.rustup.rs -sSf | sh
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ curl -sSL https://get.docker.com/ | sudo sh
 ```
 * Install `kompose` (Optional for testing)
 ```
-$curl -L https://github.com/kubernetes/kompose/releases/download/v1.26.0/kompose-linux-amd64 -o kompose
-$chmod +x kompose
-$sudo mv ./kompose /usr/local/bin/kompose
-$sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+$ curl -L https://github.com/kubernetes/kompose/releases/download/v1.26.0/kompose-linux-amd64 -o kompose
+$ chmod +x kompose
+$ sudo mv ./kompose /usr/local/bin/kompose
+$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 * Install `docker-compose` (Optional)
 ```
-$sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-$sudo chmod +x /usr/local/bin/docker-compose
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
 ```
 * Install `minikube` (Optional)
 ```
-$curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-$sudo install minikube-linux-amd64 /usr/local/bin/minikube
+$ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+$ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 ```
 * Install `cargo`, `rustup`, `rust`
 ```
-$curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-$source $HOME/.cargo/env
-$rustup component add rustfmt
-$rustup update
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ source $HOME/.cargo/env
+$ rustup component add rustfmt
+$ rustup update
 ```
 ##### Windows
 In windows you can run a subsystem environment with `WSL2`:
@@ -169,42 +168,42 @@ In windows you can run a subsystem environment with `WSL2`:
 #### **Optional Testing steps**
 * If you already installed the Optional testing requirements just clone this repository and run it:
 ```
-$git clone https://github.com/dabumana/Solana-Contributor-Resources
-$docker-compose up
+$ git clone https://github.com/dabumana/Solana-Contributor-Resources
+$ docker-compose up
 ```
 
 #### **Standard Installation**
 * Install `Solana`
 ```
-$sh -c "$(curl -sSfL https://release.solana.com/v1.8.0/install)"
+$ sh -c "$(curl -sSfL https://release.solana.com/v1.8.0/install)"
 ```
 * Install `yarn`
 ```
-$npm install -g yarn
+$ npm install -g yarn
 ```
 * Install `anchor`
 ```
-$npm i -g @project-serum/anchor-cli
+$ npm i -g @project-serum/anchor-cli
 ```
 * Any other operative system use this
 ```
-$cargo install --git https://github.com/project-serum/anchor --tag v0.19.0 anchor-cli --locked
+$ cargo install --git https://github.com/project-serum/anchor --tag v0.19.0 anchor-cli --locked
 ```
 * If `cargo install` fails install the following dependencies
 ```
-$sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
+$ sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
 ```
 * Now verify the installation
 ```
-$anchor --version
+$ anchor --version
 ```
 #### **Want to know more?**
 Take a look at the official documentation provided by `Solana-Labs`
 * 1. Clone the repositories to understand with examples how it works
 ```
-$git clone https://github.com/solana-labs/solana
-$git clone https://github.com/solana-labs/solana-program-library
-$git clone https://github.com/solana-labs/rbpf
+$ git clone https://github.com/solana-labs/solana
+$ git clone https://github.com/solana-labs/solana-program-library
+$ git clone https://github.com/solana-labs/rbpf
 ```
 ##### 8. PoC
 You can grab a copy of the content used directly with this [link](https://github.com/dabumana/solana-contributor-resources).
