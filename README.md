@@ -134,6 +134,13 @@ $ sudo apt-get install curl wget git nodejs libssl-dev libudev-dev pkg-config zl
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 $ curl -sSL https://get.docker.com/ | sudo sh
 ```
+* Post-Installation `docker`, execute it as a non-root user (Optional for testing)
+```
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+$ newgrp docker
+$ docker run hello-world
+```
 * Install `kompose` (Optional for testing)
 ```
 $ curl -L https://github.com/kubernetes/kompose/releases/download/v1.26.0/kompose-linux-amd64 -o kompose
