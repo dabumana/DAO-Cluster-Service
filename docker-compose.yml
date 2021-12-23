@@ -1,0 +1,42 @@
+version: '3.8'
+networks:
+  internal:
+    name: internal
+    external: false 
+  default:
+    name: gateway 
+services:
+  app:
+    image: solanalabs/rust-nightly
+    build:
+      context: services/rust
+      dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - 8000:8000/tcp
+    networks:
+      - internal
+  reverse_proxy:
+    image: nginx
+    container_name: reverse_proxy
+    ports:
+      - 80:80/tcp
+    networks:
+      - default
+  node:
+    image: solanalabs/solana:beta
+    container_name: node
+    ports:
+      - 8001/tcp
+      - 8899-8902/tcp
+      - 8000-8009/udp
+      - 9900/tcp
+    networks:
+      - internal
+    deploy:
+      mode: replicated
+      replicas: 3
+      placement:
+        max_replicas_per_node: 1
+      restart_policy:
+        condition: on-failure
