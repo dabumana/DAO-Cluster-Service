@@ -7,7 +7,7 @@ networks:
     name: gateway 
 services:
   app:
-    image: solanalabs/rust-nightly
+    image: ubuntu
     build:
       context: services/rust
       dockerfile: Dockerfile
@@ -25,7 +25,6 @@ services:
       - default
   node:
     image: solanalabs/solana:beta
-    container_name: node
     ports:
       - 8001/tcp
       - 8899-8902/tcp
