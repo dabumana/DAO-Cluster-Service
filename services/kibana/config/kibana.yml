@@ -1,0 +1,10 @@
+cluster.name: "kibana_node"
+server.host: 0.0.0.0
+server.port: 5601
+elasticsearch.url: "http//0.0.0.0:9200"
+enforce.bootstrap.checks: true
+bootstrap.memory_lock: true
+discovery.zen.minimum_master_nodes: 1
+discovery.type: single-node
+discovery.zen.ping.unicast.hosts: "0.0.0.0:5601"
+xpack.monitoring.ui.container.elasticsearch.enabled: true
