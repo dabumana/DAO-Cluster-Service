@@ -1,4 +1,3 @@
-#
 # Docker image to generate deterministic, verifiable builds of Anchor programs. This must be 
 # run *after* a given ANCHOR_CLI version is published and a git tag is released on GitHub.
 #
@@ -34,7 +33,7 @@ RUN . $NVM_DIR/nvm.sh && \
     npm install -g yarn @project-serum/anchor-cli npm@8.3.0
 
 # Install Solana tools.
-RUN sh -c "$(curl -sSfL https://release.solana.com/v1.9.2/install)"
+RUN curl -sSfL https://release.solana.com/v1.9.2/install | bash -
 
 COPY ./src /workdir
 
