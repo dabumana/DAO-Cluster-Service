@@ -37,4 +37,7 @@ RUN curl -sSfL https://release.solana.com/v1.9.2/install | bash -
 
 COPY ./src /workdir
 
-WORKDIR /workdir
+WORKDIR /workdir/dao
+
+RUN chmod +x io.sh
+RUN ./io.sh
