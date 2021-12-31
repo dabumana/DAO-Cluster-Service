@@ -204,6 +204,37 @@ $ sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-con
 ```
 $ anchor --version
 ```
+#### **Solana first steps**
+
+The following commands can hep you to generate your keys and validate the general attributes of an account.
+
+```
+solana --help / Receive information from any particular command
+
+solana config get / Receive information about your current node linked to the environment
+solana config set --url <URL> / You can assign a particular node to be used with the cli tool, 
+				in case that you don't have one, use this test net htps://api.devnet.solana.com 
+
+solana --version / Get solana version
+solana cluster-version / Get cluster version
+
+solana address / Get current account address
+
+solana-keygen new -o <PATH>/id.json / Generate a new account wallet
+
+solana account <ADDRESS> / Get full details about the addressed account
+solana-test-validator / Deploy a local solana validator node (used just for Development purposes)
+
+solana confirm -v / Get transanction block explorer
+
+solana balance / Check the current balance in your account
+
+solana airdrop <AMOUNT> / Use test token for development purposes
+
+solana program deploy <BINARY_PATH> / After you generate the build with anchor an binary it will be generated, 
+				      you can run that program with this command
+```
+
 #### **Want to know more?**
 Take a look at the official documentation provided by `Solana-Labs`
 * 1. Clone the repositories to understand with examples how it works
