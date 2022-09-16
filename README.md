@@ -255,3 +255,5 @@ You can grab a copy of the content used directly with this [link](https://github
 * Use [checked math](https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-overflow) and [checked casts](https://doc.rust-lang.org/std/convert/trait.TryFrom.html) whenever possible to avoid unintentional and possibly malicious behavior.
 * Always verify the `pubkey` of any program invoked via `invoke_signed()`.
 * Ensure that the account data has the type you expect it to have.
+#### :heavy_exclamation_mark: 10. DISCLAIMER
+***This repository it's just a reference of a virtualized cluster service, eventually for production you need to add additional componente, be safe.***
