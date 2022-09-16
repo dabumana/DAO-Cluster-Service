@@ -256,4 +256,4 @@ You can grab a copy of the content used directly with this [link](https://github
 * Always verify the `pubkey` of any program invoked via `invoke_signed()`.
 * Ensure that the account data has the type you expect it to have.
 #### :heavy_exclamation_mark: 10. DISCLAIMER
-***This repository it's just a reference of a virtualized cluster service, eventually for production you need to add additional componente, be safe.***
+***This repository it's just a reference of a virtualized cluster service, eventually for production you need to add additional components, be safe.***
