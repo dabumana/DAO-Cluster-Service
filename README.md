@@ -1,14 +1,14 @@
 ![GitHub license](https://img.shields.io/github/license/dabumana/dao-cluster-service)
-# DAO Cluster Service - Cluster node service
-#### Developer walk-through :feelsgood:
-##### 1. Introduction
+# DAO Cluster Service - Cluster node service :moyai: :moyai: :moyai: 
+### Developer walk-through :godmode:
+#### :round_pushpin: 1. Introduction
 The arise of new technologies merged in a context where the documentation and development roadmap should point to the real use case, allowing the simplification of the process and the learning curve, bringing support and stability even through the different types of changes and challenges that will be faced during the development stage of the project, having this in mind, the early adoption of technologies that are not fully tested in a real scenario could lead to significant looses and misdirection, but the development always can be controlled with a constant review about the framework/engine until an stable version can be the standard of the industry to be applied.
 
 Solana is not Ethereum, can be used as a "Ethereum killer" due to the improvements that offers over it, but it doesn't mean that it should be considered the best fit in all the cases, these second generation blockchains are focus in the user necessities and not completely in the over production of computing power to resolve blocks, this is why the protocols behind keeps the sustainability as a main objective, if it is or not effective, should be evaluated through a comparison and application of use cases, basically each framework has their own pros and cons according to the necessities of the project.
 
 This walkthrough it's to evaluate the actual precepts behind Solana and how they are applied in a real case scenario, recreating a production environment locally for it. 
 
-##### 2. Background
+#### :busts_in_silhouette: 2. Background
 Three aspects are the Aquiles heel, when we talk about Blockchain development, completely focus in scalability, performance and concurrence, are the main concern inside the organizations these days, even when it sounds good the idea to have a Hyper-distributed hashed database for a particular application, requires more than a couple of servers to have a proper environment that can fit today's standards and requirements, even when we talk about decentralized systems, the architecture behind still needs a policy protocol to handle the resources according to the growing of the user database, what we should have in mind if we want to provide BaaS, their implications and sustainability trough the time
 
 ### How it works?
@@ -16,7 +16,7 @@ As an industrial cluster it should integrate the replication concept for further
 
 You will find a composed file that can be deployed through `docker-compose` with an initial scaffold for further development, Anchor tool-set, ELK stack for monitoring and multiple Solana nodes with a limited set of resources, that can be easily changed before the deployment stage, keep in mind that you need to specify the resources in the file before running the cluster, version compatibility tested 3.3 - 3.6.
 
-##### Notes: It can be converted to be used with `kubernetes` with this [tool](https://github.com/kubernetes/kompose).
+#### Notes: It can be converted to be used with `kubernetes` with this [tool](https://github.com/kubernetes/kompose).
 
 The objective is to have a environment with a minor implementation of the CPI that can shows the integration and can evaluate the features of Solana as a complement for concurrent tasks in a service mesh.
 
@@ -28,8 +28,8 @@ If your objective it's to simplify and bring agility to the development process 
 
 **You can extend the nodes and details of the cluster if you want to add some other frameworks.**
 
-##### 3. Solana Architecture
-##### General Overview
+#### :milky_way: 3. Solana Architecture
+### General Overview
 [Solana Labs](https://github.com/solana-labs) provides a set of tools to develop applications from the client side or on-chain programs that can be consequentially interacting with the cluster,  even some examples related to the application in a real use case, but in some cases the explanation itself it's not fully clear and you need to take a look at the details, the type of details that are a defining factor between security and coding best practices.
 
 Solana promotes 8 conceptual features behind their product that are key values for understanding the actual conformation of modules and rules that handles the replication of nodes and accounts, so everything must be defined as an account model that can be a data account or program account.
@@ -106,9 +106,9 @@ The network has a potential rollback point, but every subsequent vote doubles th
 
 A vast majority of example are already stored in the [solana-program-library](https://github.com/solana-labs/solana-program-library/tree/master/examples), these programs can be developed in Rust or C and tested very easily, just run `make`. 
 
-##### 4. Cluster Design
-![alt text](https://github.com/dabumana/Solana-Contributor-Resources/blob/main/images/ClusterDesign.drawio.png)
-##### 5. Technological Stack
+#### :triangular_ruler: 4. Cluster Design
+![alt text](https://github.com/dabumana/dao-cluster-service/blob/main/images/ClusterDesign.drawio.png)
+#### :wrench: 5. Technological Stack
 ##### [Solana](https://solana.com/) - *Solana is a decentralized blockchain built to enable scalable apps.*
 ##### [Rust](https://rustup.rs/) - *Rust Programmin Language Installer*
 ##### [ElasticSearch](https://www.elastic.co/) - *It provides a distributed, [multitenant](https://en.wikipedia.org/wiki/Multitenancy "Multitenancy")-capable [full-text search](https://en.wikipedia.org/wiki/Full-text_search "Full-text search") engine with an [HTTP](https://en.wikipedia.org/wiki/HTTP "HTTP") web interface and schema-free [JSON](https://en.wikipedia.org/wiki/JSON "JSON") documents*.
@@ -120,7 +120,7 @@ A vast majority of example are already stored in the [solana-program-library](ht
 ##### [Minikube](https://minikube.sigs.k8s.io/docs/start/) - *`minikube` is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes*.
 ##### Toolset:
 ##### [Anchor](https://github.com/project-serum/anchor) - *Anchor is a framework for Solana's [Sealevel](https://medium.com/solana-labs/sealevel-parallel-processing-thousands-of-smart-contracts-d814b378192) runtime providing several convenient developer tools for writing smart contracts.*
-##### 6. Requirements
+#### :construction: 6. Requirements
 I really suggest you to deploy a local production environment through a virtualized environment, you can take a look at the options at the market, but as a standard practice you can abstract the environment with a proper cypher in a external Disk (LUKS / BitLocker), just a best practice suggestion, with a proper VPN for further access keeping separated the internal Host from the bridged connection, in case that you have your own security operation protocol, just proceed and install the libraries required for it.
 ##### Linux
 * Update your system library
@@ -170,7 +170,7 @@ $ rustup update
 In windows you can run a subsystem environment with `WSL2`:
 * Install [`WSL2`](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
 * Once you have the subsystem installed, follow the same steps used for `linux`
-##### 7. Installation
+#### :warning: 7. Installation
 ##### **In this stage you will configure the framework for development use.**
 #### **Optional Testing steps**
 * If you already installed the Optional testing requirements just clone this repository and run it:
@@ -243,10 +243,10 @@ $ git clone https://github.com/solana-labs/solana
 $ git clone https://github.com/solana-labs/solana-program-library
 $ git clone https://github.com/solana-labs/rbpf
 ```
-##### 8. PoC
+#### :star: 8. PoC
 You can grab a copy of the content used directly with this [link](https://github.com/dabumana/solana-contributor-resources).
 ##### *If you have all the requirements installed in your workstation just run `docker-compose up`*.
-##### 9. Developer Best Practices
+#### :warning: 9. Developer Best Practices
 * Keep an isolated environment for testing, generate your `keys` for accessing remotely in case that you are using a remote server.
 * Add a whitelist to receive just the connection just from a determined IP.
 * Configure `iptables`.
