@@ -1,5 +1,5 @@
 ![GitHub license](https://img.shields.io/github/license/dabumana/solana-contributor-resources)
-# DAO Cluster Service - Cluster node service with a DAO
+# DAO Cluster Service - Cluster node service
 #### Developer walk-through :feelsgood:
 ##### 1. Introduction
 The arise of new technologies merged in a context where the documentation and development roadmap should point to the real use case, allowing the simplification of the process and the learning curve, bringing support and stability even through the different types of changes and challenges that will be faced during the development stage of the project, having this in mind, the early adoption of technologies that are not fully tested in a real scenario could lead to significant looses and misdirection, but the development always can be controlled with a constant review about the framework/engine until an stable version can be the standard of the industry to be applied.
