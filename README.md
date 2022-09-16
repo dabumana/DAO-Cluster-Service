@@ -1,4 +1,4 @@
-![GitHub license](https://img.shields.io/github/license/dabumana/solana-contributor-resources)
+![GitHub license](https://img.shields.io/github/license/dabumana/dao-cluster-service)
 # DAO Cluster Service - Cluster node service
 #### Developer walk-through :feelsgood:
 ##### 1. Introduction
